@@ -1,0 +1,28 @@
+@mixin animation($color, $duration, $strip-name) {
+    background-color: $color;
+    animation-duration: $duration;
+    animation-timing-function: ease-out;
+    animation-name: $strip-name;
+}
+
+@mixin transform ($origin) {
+    -webkit-transform-origin: $origin;
+    transform-origin: $origin
+}
+
+@mixin center-strip-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: $height-100;
+}
+
+@mixin skew-transform($skew-deg) {
+    -webkit-transform: $skew-deg;
+    transform: $skew-deg
+}
+
+@mixin key-frame-translate-3d($f-value, $s-value, $t-value) {
+    transform: translate3d($f-value, $s-value, $t-value)
+}
